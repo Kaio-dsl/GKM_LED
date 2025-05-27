@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/GKM_LED.uf2'
+elf = 'build/GKM_LED.elf'

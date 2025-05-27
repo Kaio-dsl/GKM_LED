@@ -1,0 +1,124 @@
+{
+  "project_name": "Pico GKM_LED LED Matrix Controller",
+  "description": "Controla uma matriz de LEDs GKM_LED para exibir números e um padrão de rosto com base em entradas de botões no Raspberry Pi Pico.",
+  "target_hardware": "Raspberry Pi Pico",
+  "led_matrix": {
+    "num_pixels": 25,
+    "is_rgbw": false,
+    "pin": 7
+  },
+  "pins": {
+    "GKM_LED": 7,
+    "led_red_status": 13,
+    "button_a": 5,
+    "button_b": 6
+  },
+  "parameters": {
+    "debounce_delay_us": 30000,
+    "number_display_duration_ms": 1000,
+    "face_display_duration_s": 5
+  },
+  "colors": {
+    "numbers": {
+      "r": 0,
+      "g": 0,
+      "b": 200,
+      "comment": "Azul para os números"
+    },
+    "face": {
+      "r": 60,
+      "g": 30,
+      "b": 0,
+      "comment": "Laranja para o rosto"
+    }
+  },
+  "patterns": {
+    "comment": "Padrões para uma matriz 5x5 (25 pixels), representados como um array linear. 1 = LED ACESO, 0 = LED APAGADO.",
+    "numbers": {
+      "0": [
+        0, 1, 1, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 1, 1, 0
+      ],
+      "1": [
+        0, 1, 1, 1, 0,
+        0, 0, 1, 0, 0,
+        0, 0, 1, 0, 0,
+        0, 0, 1, 0, 0,
+        0, 1, 1, 1, 0
+      ],
+      "2": [
+        0, 1, 1, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 1, 1, 1, 0,
+        0, 1, 0, 0, 0,
+        0, 1, 1, 1, 0
+      ],
+      "3": [
+        0, 1, 1, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 1, 1, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 1, 1, 1, 0
+      ],
+      "4": [
+        0, 1, 0, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 1, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 0, 1, 0
+      ],
+      "5": [
+        0, 1, 1, 1, 0,
+        0, 1, 0, 0, 0,
+        0, 1, 1, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 1, 1, 1, 0
+      ],
+      "6": [
+        0, 1, 1, 1, 0,
+        0, 1, 0, 0, 0,
+        0, 1, 1, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 1, 1, 0
+      ],
+      "7": [
+        0, 1, 1, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 0, 1, 0, 0,
+        0, 0, 1, 0, 0,
+        0, 0, 1, 0, 0
+      ],
+      "8": [
+        0, 1, 1, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 1, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 1, 1, 0
+      ],
+      "9": [
+        0, 1, 1, 1, 0,
+        0, 1, 0, 1, 0,
+        0, 1, 1, 1, 0,
+        0, 0, 0, 1, 0,
+        0, 1, 1, 1, 0
+      ]
+    },
+    "face": [
+      0, 1, 0, 1, 0,
+      0, 0, 0, 0, 0,
+      1, 0, 0, 0, 1,
+      0, 1, 1, 1, 0,
+      0, 0, 0, 0, 0
+    ],
+    "all_off": [
+      0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0
+    ]
+  }
+}
